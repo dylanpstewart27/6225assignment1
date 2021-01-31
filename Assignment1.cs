@@ -60,20 +60,7 @@ namespace Assignment1_Spring2021
 
         }
 
-        /// <summary>
-        ///Print a pattern with n rows given n as input
-        ///n – number of rows for the pattern, integer (int)
-        ///This method prints a triangle pattern.
-        ///For example n = 5 will display the output as: 
-        ///     *
-        ///    ***
-        ///   *****
-        ///   *******
-        ///  *********
-        ///returns      : N/A
-        ///return type  : void
-        /// </summary>
-        /// <param name="n"></param>
+       
         private static void printTriangle(int n)
         {
             try
@@ -99,7 +86,9 @@ namespace Assignment1_Spring2021
 
                 throw;
             }
-
+            //This was a very simple question that I had completed in an online course I took myself so I was able to reuse the code. 
+            //Took me about 15 minutes for me to refind my work and make sure it was correct, a simple but effective question as 
+            //printing the blank spaces is a strange thing to think of.
         }
 
       
@@ -128,21 +117,13 @@ namespace Assignment1_Spring2021
 
                 throw;
             }
-
+            //I really enjoyed this question, using algorithmic thinking to work through number series like this and fibonnac
+            //is interesting because you will know immediately if it works. A somewhat but not very challenging question
+            //but good warmup to programming, estimated time 30 minutes to complete.
         }
 
 
-        /// <summary>
-        ///Given a non-negative integer c, decide whether there're two integers a and b such that a^2 + b^2 = c.
-        ///For example:
-        ///Input: C = 5 will return the output: true (1*1 + 2*2 = 5)
-        ///Input: A = 3 will return the output : false
-        ///Input: A = 4 will return the output: true
-        ///Input: A = 1 will return the output : true
-        ///Note: You cannot use inbuilt Math Class functions.
-        /// </summary>
-        /// <param name="n3"></param>
-        /// <returns>True or False</returns>
+       
 
 
         private static bool squareSums(int n3)
@@ -165,6 +146,10 @@ namespace Assignment1_Spring2021
                 throw;
             }
         }
+
+        //This question did not take me very long, maybe 1.5 hours but mostly because I was overcomplicating the logic
+        //I think mathematic based questions like this are very good because they require analytical thinking and are 
+        //not too complicated once you figure out the logic of what it should require.
 
        
         private static int diffPairs(int[] nums, int k)
@@ -201,23 +186,12 @@ namespace Assignment1_Spring2021
 
         }
 
-        /// <summary>
-        /// An Email has two parts, local name and domain name. 
-        /// Eg: rocky @usf.edu – local name : rocky, domain name : usf.edu
-        /// Besides lowercase letters, these emails may contain '.'s or '+'s.
-        /// If you add periods ('.') between some characters in the local name part of an email address, mail sent there will be forwarded to the same address without dots in the local name.
-        /// For example, "bulls.z@usf.com" and "bullsz@leetcode.com" forward to the same email address.  (Note that this rule does not apply for domain names.)
-        /// If you add a plus('+') in the local name, everything after the first plus sign will be ignored.This allows certain emails to be filtered, for example ro.cky+bulls @usf.com will be forwarded to rocky@email.com.  (Again, this rule does not apply for domain names.)
-        /// It is possible to use both of these rules at the same time.
-        /// Given a list of emails, we send one email to each address in the list.Return, how many different addresses actually receive mails?
-        /// Eg:
-        /// Input: ["dis.email+bull@usf.com","dis.e.mail+bob.cathy@usf.com","disemail+david@us.f.com"]
-        /// Output: 2
-        /// Explanation: "disemail@usf.com" and "disemail@us.f.com" actually receive mails
-        /// </summary>
-        /// <param name="emails"></param>
-        /// <returns>The number of unique emails in the given list</returns>
+        //This question gave me lots of trouble, I had to do several hours of googling and looking at online resources to figure it out
+        //This was a question that googling more information about arrays prooved to be a good resource, as it reminded me about sorting the array
+        //Once the array was sorted it made much more logical sense to me. Lots of trial and error to solve this, especially without the use of Hash Sets as
+        // those would have made this very simple as you would not have to deal with duplicates . 
 
+        
         private static int UniqueEmails(List<string> emails)
         {
             try
@@ -264,25 +238,12 @@ namespace Assignment1_Spring2021
             }
 
         }
+        //This question took me the longest out of all of them, about half of a day. The main problem was that I knew what steps I would need to take 
+        //but I was unable to write code to make it work until I did more searching through stack overflow and various help pages to try and figure out what 
+        //methods I could call to do things such as .Replace. Googling about Lists made it very helpful as it showed what I could do with lists and whether it would
+        //be easier to work with the lists or turn it into arrays. Very solid question that tested my knowledge and ability to retrieve the proper knowledge.
 
-        /// <summary>
-        /// You are given the array paths, where paths[i] = [cityAi, cityBi] means there exists a direct path going from cityAi to cityBi. Return the destination city, that is, the city without any path outgoing to another city.
-        /// It is guaranteed that the graph of paths forms a line without any loop, therefore, there will be exactly one destination city.
-        /// Example 1:
-        /// Input: paths = [["London", "New York"], ["New York","Tampa"], ["Delhi","London"]]
-        /// Output: "Tampa" 
-        /// Explanation: Starting at "Delhi" city you will reach "Tampa" city which is the destination city.Your trip consist of: "Delhi" -> "London" -> "New York" -> "Tampa".
-        /// Input: paths = [["B","C"],["D","B"],["C","A"]]
-        /// Output: "A"
-        /// Explanation: All possible trips are: 
-        /// "D" -> "B" -> "C" -> "A". 
-        /// "B" -> "C" -> "A". 
-        /// "C" -> "A". 
-        /// "A". 
-        /// Clearly the destination city is "A".
-        /// </summary>
-        /// <param name="paths"></param>
-        /// <returns>The destination city string</returns>
+        
         private static string DestCity(string[,] paths)
         {
             try
@@ -328,7 +289,11 @@ namespace Assignment1_Spring2021
                 throw;
             }
 
-
+            //This question I was stuck on for 4 hours or so with little to no progress about how I should attack it without the use of a dictionary. 
+            //A key factor was realising that there was a comma in the array notation and having to lookup what that meant as I had never seen that before
+            //Once I learned it was a multidimensional array it made it very easy to understand conceptually. Learning about the .Except method on 
+            //Microsofts website made the problem a breeze, but I really liked how the problem used the multidimensional array and my experience on
+            //searcing for information for the previous problems made this problem a breeze.
         }
 
 
